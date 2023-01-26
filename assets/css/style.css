@@ -13,6 +13,7 @@ body {
 }
 
 /* --------HEADER------ */
+
 header img {
   width: 150px;
 }
@@ -20,6 +21,10 @@ header img {
 /* Logos */
 nav {
   display: flex;
+  align-items: baseline;
+}
+.menuBar {
+  display: none;
 }
 nav > ul {
   display: flex;
@@ -33,6 +38,7 @@ nav > ul > a {
   color: inherit;
   text-decoration: none;
 }
+
 header a:hover {
   background-color: lightgrey;
 
@@ -119,7 +125,12 @@ a {
   border-radius: 10px;
   justify-content: space-between;
   flex-direction: row-reverse;
+  text-decoration: none;
 }
+.menu a:hover {
+  background-color: grey;
+}
+
 /* ImaegsBloc */
 .imagebloc {
   height: 430px;
@@ -142,15 +153,16 @@ a {
 .villeDescription {
   height: 100%;
   width: 60%;
+  flex: 3;
 }
 
 .Map {
   height: 100%;
-  width: 40%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   border-radius: 10%;
-  border-color: purple solid;
+  flex: 1;
 }
 .Map a {
   text-decoration: none;
@@ -192,7 +204,7 @@ a {
 .les-immanquables {
   padding: 30px 0px;
 
-  width: 1000px;
+  width: 100%;
 }
 .carousel {
   border-width: 1px;
@@ -269,16 +281,84 @@ a {
   border-radius: 50%;
   list-style-type: none;
 }
+/* -----FOOTER----- */
+.footerElements {
+  background-color: #f9f1ec;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.footerElements span {
+  font-family: Google Sans;
+  font-weight: bold;
+}
 /* ------MEDIA QUERIES----- */
 @media (max-width: 1184px) {
-  .imagebloc > img {
-    height: 100%;
+  .imagebloc {
+    justify-content: center;
+    width: 100%;
   }
-  /* Rules */
+  .imagebloc .col1 {
+    display: none;
+  }
 }
 @media (max-width: 1024px) {
-  /* Rules */
+  .container {
+    width: 599.2px;
+  }
+  nav > ul {
+    gap: 10px;
+  }
+  header > nav > ul > a > span {
+    display: none;
+  }
+  .menu {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-bottom: 0px;
+  }
+  .imagebloc {
+    border: solid red 1px;
+    justify-content: flex-end;
+    max-width: 100%;
+    height: auto;
+  }
+  .imagebloc > img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 @media (max-width: 768px) {
+  .container {
+    min-width: 390px;
+    margin: auto;
+  }
+  header img {
+    display: none;
+  }
+  .menuBar {
+    display: contents;
+    padding-left: 30px;
+    font-size: 30px;
+  }
+  nav > ul > a {
+    color: inherit;
+    text-decoration: none;
+    height: 30px;
+  }
+  .imagebloc {
+    border: solid red 1px;
+    justify-content: flex-end;
+    max-width: 100%;
+    height: auto;
+  }
+  .imagebloc > img {
+    max-width: 100%;
+    height: auto;
+  }
   /* Rules */
 }
