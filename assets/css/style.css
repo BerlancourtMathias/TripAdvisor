@@ -108,7 +108,7 @@ a {
   display: flex;
 
   gap: 10px;
-
+  padding-inline-start: 0;
   margin-bottom: 20px;
 }
 
@@ -213,19 +213,19 @@ a {
   width: 100%;
   /* padding-bottom: 50px; */
 }
-.entertainment {
+.title-scroll {
   width: 25%;
   height: 200px;
   padding-top: 30px;
   display: flex;
   flex-direction: column;
 }
-.entertainment p {
+.title-scroll p {
   padding-top: 20px;
   line-height: 20px;
   justify-content: center;
 }
-.monument {
+.location {
   padding-top: 20px;
   padding-bottom: 20px;
   height: 100%;
@@ -242,9 +242,11 @@ a {
   height: 80%0%;
   flex-shrink: 0;
   position: relative;
+  flex-shrink: 1;
 }
 .picture img {
   height: 50%;
+  width: 100%;
 }
 .picture p {
   font-weight: bold;
@@ -322,7 +324,6 @@ a {
     margin-bottom: 0px;
   }
   .imagebloc {
-    border: solid red 1px;
     justify-content: flex-end;
     max-width: 100%;
     height: auto;
@@ -351,7 +352,6 @@ a {
     height: 30px;
   }
   .imagebloc {
-    border: solid red 1px;
     justify-content: flex-end;
     max-width: 100%;
     height: auto;
