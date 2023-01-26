@@ -27,6 +27,7 @@ nav > ul {
   flex: 1;
   padding: 10px;
   column-gap: 50px;
+  align-items: baseline;
 }
 nav > ul > a {
   color: inherit;
@@ -79,6 +80,10 @@ h1 {
 h2 {
   color: black;
   font-size: 28px;
+  font-weight: 1000;
+}
+h3 {
+  font-size: 24px;
 }
 
 .subtitle {
@@ -127,19 +132,133 @@ a {
 }
 
 .textAndMap {
-  background-color: yellowgreen;
   height: 400px;
   display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  gap: 30px;
 }
-.villeLumiereText {
-  background-color: pink;
-  display: flex;
-  flex-direction: column;
+.villeDescription {
+  height: 100%;
+  width: 60%;
 }
-box-sizing: border-box;
+
 .Map {
+  height: 100%;
+  width: 40%;
   display: flex;
   flex-direction: column;
+  border-radius: 10%;
+  border-color: purple solid;
 }
-.Map + p {
+.Map a {
+  text-decoration: none;
+  background-color: #333333;
+  color: white;
+  width: 50%;
+  height: 25%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 10px;
+}
+.mapTop {
+  width: auto;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fe5e5e;
+  color: white;
+  align-items: center;
+  padding: 10%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.mapBottom {
+  width: auto;
+  height: 50%;
+  display: flex;
+}
+.mapBottom img {
+  flex: 1;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* Must do in the city */
+
+.les-immanquables {
+  padding: 30px 0px;
+
+  width: 1000px;
+}
+.carousel {
+  border-width: 1px;
+  height: 200px;
+  display: flex;
+  width: 100%;
+}
+.entertainment {
+  width: 25%;
+  height: 200px;
+  padding-top: 30px;
+}
+.entertainment p {
+  padding-top: 20px;
+  line-height: 20px;
+}
+.monument {
+  padding-top: 20px;
+  height: 100%;
+  display: flex;
+
+  border-width: 5px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  overflow-x: scroll;
+  padding-bottom: 50px;
+  gap: 5px;
+}
+
+.picture {
+  height: 100%;
+  flex-shrink: 0;
+  position: relative;
+}
+.picture img {
+  height: 100%;
+}
+.picture p {
+  font-weight: bold;
+}
+.heart {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: white;
+  border: #333333 solid;
+  padding: 10px;
+  border-radius: 50%;
+}
+.badge {
+  position: absolute;
+  background-color: #f1b202;
+  height: 40px;
+  border-top-left-radius: 30%;
+  border-top-right-radius: 30%;
+  top: 90px;
+  left: 10px;
+}
+.rate {
+  display: flex;
+  gap: 20px;
+  padding-top: 5px;
+}
+.rate li {
+  height: 15x;
+  width: 15px;
+  color: #04a96c;
+  border-radius: 50%;
+  list-style-type: none;
 }
